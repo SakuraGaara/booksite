@@ -1,6 +1,6 @@
 {%extends "admin/base.html"%}
 {%block title%}
-安装 - 北半球
+安装 - BookSite
 {%endblock title%}
 
 {%block metas%}
@@ -27,7 +27,7 @@
     {%include "admin/start/_head.html"%}
     <div class="start-content">
         {%if code==0%}
-        <p>已经安装了北半球，您现在可以登录
+        <p>已经安装了BookSite，您现在可以登录
         </p>
         <p class="b-btn">
         <a class="btn btn-default" href="{{url_for("admin.login")}}">开始登录</a>

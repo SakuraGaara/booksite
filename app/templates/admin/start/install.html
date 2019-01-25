@@ -1,6 +1,6 @@
 {%extends "admin/base.html"%}
 {%block title%}
-安装 - 北半球
+安装 - BookSite
 {%endblock title%}
 
 {%block metas%}
@@ -25,14 +25,14 @@
 <div class="start-page">
     {%include "admin/start/_head.html"%}
     <div class="start-content">
-        <h1 class="title">欢迎使用北半球</h1>
+        <h1 class="title">欢迎使用BookSite</h1>
         <p>请配置你的网站信息</p>
         <form class="form-horizontal" action="{{url_for("admin.install", step=1)}}" method="post">
             {{ form.hidden_tag() }}
             <div class="form-group">
                 <label for="" class="col-sm-2 control-label">网站名称</label>
                 <div class="col-sm-8">
-                    <input name="name" class="form-control" type="text" value="beibq">
+                    <input name="name" class="form-control" type="text" value="BookSite">
                 </div>
             </div>
             <div class="form-group">
