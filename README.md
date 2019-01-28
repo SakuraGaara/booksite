@@ -30,3 +30,10 @@ python manage.py runserver -h 0.0.0.0
 
 第一次访问会跳转到配置界面，根据指示配置站点信息后就能使用booksite
 
+
+
+# Docker 安装使用
+#### 使用Docker运行
+```
+docker run -d -p 5000:5000 --name booksite sakuragaara/booksite
+```
