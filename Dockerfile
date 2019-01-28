@@ -19,4 +19,4 @@ ADD requirements.txt .
 RUN pip3 install -r requirements.txt
 
 RUN echo "127.0.0.1 localhost" >> /etc/hosts
-ENTRYPOINT ["python3","manage.py","runserver","-h","0.0.0.0"]
+ENTRYPOINT ["python3","manage.py","runserver","-h","localhost"]
