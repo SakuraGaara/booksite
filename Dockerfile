@@ -6,6 +6,7 @@ WORKDIR /data
 
 
 RUN yum -y install epel-release && \
+    yum -y install https://centos7.iuscommunity.org/ius-release.rpm && \
     yum -y install openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel && \
     yum -y install python36u python36u-pip && \
     ln -s /bin/python3.6 /bin/python3 && \
