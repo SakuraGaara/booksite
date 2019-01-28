@@ -12,7 +12,7 @@ RUN yum -y install epel-release && \
     ln -s /bin/python3.6 /bin/python3 && \
     ln -s /bin/pip3.6 /bin/pip3
 
-ADD app .
+ADD app ./app
 ADD manage.py .
 ADD requirements.txt .
 
