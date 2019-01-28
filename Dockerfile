@@ -7,9 +7,9 @@ WORKDIR /data
 RUN yum -y install epel-release && \
     yum -y install python36
 
-ADD app
-ADD manage.py
-ADD requirements.txt
+ADD app .
+ADD manage.py .
+ADD requirements.txt .
 
 RUN pip install -r requirements.txt
 
