@@ -4,13 +4,17 @@ MAINTAINER "SakuraGaara"
 
 WORKDIR /data
 
+
 RUN yum -y install epel-release && \
-    yum -y install python36
+    yum -y install openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel && \
+    yum -y install python36u python36u-pip && \
+    ln -s /bin/python3.6 /bin/python3 && \
+    ln -s /bin/pip3.6 /bin/pip3
 
 ADD app .
 ADD manage.py .
 ADD requirements.txt .
 
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
-ENTRYPOINT ["python","manage.py","runserver"]
+ENTRYPOINT ["python3","manage.py","runserver"]
