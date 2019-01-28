@@ -18,4 +18,4 @@ ADD requirements.txt .
 
 RUN pip3 install -r requirements.txt
 
-ENTRYPOINT ["python3","manage.py","runserver"]
+ENTRYPOINT ["python3","manage.py","runserver","-h 0.0.0.0"]
