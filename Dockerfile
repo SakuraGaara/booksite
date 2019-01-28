@@ -1,4 +1,4 @@
-FROM centos:7.4
+FROM centos:7
 LABEL version="1.0"
 MAINTAINER "SakuraGaara"
 
