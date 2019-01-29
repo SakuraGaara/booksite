@@ -34,6 +34,13 @@ python manage.py runserver -h 0.0.0.0
 
 # Docker 安装使用
 #### 使用Docker运行
+- Dockerfile使用python:3.6-alpine镜像
+- 首先解决lxml和Pillow的依赖问题
+```
+RUN apk add --no-cache gcc musl-dev libxslt-dev \
+    jpeg-dev zlib-dev freetype-dev
+```
+
 ```
 docker run -d -p 5000:5000 --name booksite sakuragaara/booksite
 ```
