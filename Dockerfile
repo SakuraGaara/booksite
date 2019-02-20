@@ -4,8 +4,10 @@ MAINTAINER "SakuraGaara"
 
 WORKDIR /data
 
-RUN apk add --no-cache gcc musl-dev libxslt-dev \
-    jpeg-dev zlib-dev freetype-dev
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+RUN apk update && apk add --no-cache gcc musl-dev libxslt-dev \
+    jpeg-dev zlib-dev freetype-dev tzdata
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/Shanghai" > /etc/timezone
 
 
 ADD app ./app
